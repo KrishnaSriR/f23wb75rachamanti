@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  
+    h1= title
+    -let results = [{ subject: "Math", grade: "A" },{ subject: "Science", grade: "B" },{ subject: "History", grade: "C" }]
+    .container-fluid
+      .row
+        each result in results
+          .col-sm-2
+            p Subject: #{result.subject}
+            p Grade: #{result.grade}
+
